@@ -81,7 +81,6 @@ io.on("connection", (socket) => {
 
   socket.on("join chat", (room) => {
     socket.join(room);
-    console.log("User Joined Room :" + room);
   });
   
   socket.on("typing", (room)=>{
@@ -89,7 +88,6 @@ io.on("connection", (socket) => {
   })
   socket.on("stoptyping", (room)=>{
     socket.to(room).emit("stoptyping");
-    console.log("stoping")
   })
 
   socket.on("newMessage", (newMessageRecieved) => {
