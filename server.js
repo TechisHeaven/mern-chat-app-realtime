@@ -67,7 +67,7 @@ const server = app.listen(PORT || 5000, () =>
 const io = require("socket.io")(server, {
   pingTimout: 60000,
   cors: {
-    origin: "http://localhost:3000",
+    origin: "https://mern-chat-app-p6sj.onrender.com:5000",
   },
 });
 
