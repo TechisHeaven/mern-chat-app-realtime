@@ -64,10 +64,10 @@ const server = app.listen(PORT || 5000, () =>
   console.log(`Listening on port ${PORT}`.yellow.bold)
 );
 
-const io = new WebSocket("ws://mern-chat-app-p6sj.onrender.com");
+// const io = new WebSocket("ws://mern-chat-app-p6sj.onrender.com");
 // here fix may be
 
-io = require("socket.io")(server, {
+const io = require("socket.io")(server, {
   pingTimout: 60000,
   cors: {
     origin: "https://mern-chat-app-p6sj.onrender.com",
